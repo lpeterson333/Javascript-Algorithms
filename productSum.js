@@ -37,6 +37,7 @@ function findMaxProduct(intArray){
       }
     }else if (elem < 0){
       //if negative number
+      //note...do not need to check for equality since if equal the maxNum will not change
       if (elem < maxNums.negA){
         maxNums.negA = elem;
       }else if (elem < maxNums.negB){
