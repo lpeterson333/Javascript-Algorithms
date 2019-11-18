@@ -48,24 +48,25 @@ function findMaxProduct(intArray){
 
   let maxPosProduct = maxNums.posA * maxNums.posB;
   let maxNegProduct = maxNums.negA * maxNums.negB;
-  let result = [];
-  if (maxPosProduct > maxNegProduct){
-    result.push(maxNums.posA);
-    result.push(maxNums.posB);
-  } else if (maxPosProduct < maxNegProduct){
-    result.push(maxNums.negA);
-    result.push(maxNums.negB);
-  }else{
-    //a possible problem here is that the user may be expecting a return result array with only two numbers...this would need clarification from the user if they want all results or only two numbers
-    result.push(maxNums.posA);
-    result.push(maxNums.posB);
-    result.push(maxNums.negA);
-    result.push(maxNums.negB);
-  }
-//also what is the result the user wants?  Is it the two maximal numbers or is it only the maximal product sum
-//if the user wants the maximal numbers then
+  //what is the result the user wants?  Is it the two maximal numbers or is it only the maximal product sum
+  //if the user wants the maximal numbers then
+  // let result = [];
+  // if (maxPosProduct > maxNegProduct){
+  //   result.push(maxNums.posA);
+  //   result.push(maxNums.posB);
+  // } else if (maxPosProduct < maxNegProduct){
+  //   result.push(maxNums.negA);
+  //   result.push(maxNums.negB);
+  // }else{
+  //   //a possible problem here is that the user may be expecting a return result array with only two numbers...this would need clarification from the user if they want all results or only two numbers
+  //   result.push(maxNums.posA);
+  //   result.push(maxNums.posB);
+  //   result.push(maxNums.negA);
+  //   result.push(maxNums.negB);
+  // }
+
 //return result
-//otherwise
+//otherwise if the user only wants the maximal product sum
 return maxPosProduct >= maxNegProduct ? maxPosProduct : maxNegProduct;
 
 
