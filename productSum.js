@@ -1,11 +1,11 @@
 //Given an array of numbers, find the maximal product you can get from multiplying two numbers in the array
 
-//First create an array of random numbers to work with
+//First create an array of random integer numbers to work with
 //Iterate through the array keeping track of the two highest numbers
 //Multiply the two highest numbers
 //slight twist if there are negative numbers in the array since multiplying two negative numbers will yield a positive number but multiplying a negative and positive number will yield a negative number
 //Time complexity of 0(n) since iterating through the array only once and time will depend on the number of elements in the array
-//Space complexity of 0(1) since only keeping track of the two maximal elements in the array
+//Space complexity of 0(1) since only keeping track of the two maximal positive integers and two minimal negative integers in the array
 
 
 function createRandomArray(nIndex, max, min){
