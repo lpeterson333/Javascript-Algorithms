@@ -62,7 +62,12 @@ function findMaxProduct(intArray){
     result.push(maxNums.negA);
     result.push(maxNums.negB);
   }
-return result;
+//also what is the result the user wants?  Is it the two maximal numbers or is it only the maximal product sum
+//if the user wants the maximal numbers then
+//return result
+//otherwise
+return maxPosProduct >= maxNegProduct ? maxPosProduct : maxNegProduct;
+
 
 }
 
