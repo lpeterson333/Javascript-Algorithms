@@ -56,6 +56,7 @@ function findMaxProduct(intArray){
     result.push(maxNums.negA);
     result.push(maxNums.negB);
   }else{
+    //a possible problem here is that the user may be expecting a return result array with only two numbers...this would need clarification from the user if they want all results or only two numbers
     result.push(maxNums.posA);
     result.push(maxNums.posB);
     result.push(maxNums.negA);
