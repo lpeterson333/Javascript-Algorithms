@@ -32,4 +32,5 @@ function bubbleSort(sortMeArr){
 } while (swap) //stop the loop if no swaps
   console.log("after swap")
   console.log(sortMeArr)
+  return sortMeArr //return sorted array
 }
