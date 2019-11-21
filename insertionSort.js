@@ -28,5 +28,5 @@ function insertionSort(sortMeArr){
 
 let newRandomArray = createArray(10, -99, 99);
 console.log(newRandomArray);
-let sortedArray = insertionSort(newRandomArray);
-console.log(sortedArray);
+insertionSort(newRandomArray);
+console.log(newRandomArray);//note a new array is not created...array is sorted in place
