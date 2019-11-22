@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Caesar Encryption</title>
+  <script src="./bundle.js"></script>
+
+ 
+</head>
+<body>
+  <h1>Enter a word to encrypt: </h1>
+  <input type="text" id = "encryptMeStr" name = "encryptMeStr" placeholder = "Word to Encrypt">
+  <h1>Enter a number between 0 and 26 for the encryption shift</h1>
+  <input type = "text" id = "shift" name = "shift" placeholder = "Number">
+  <br /><br />
+  <button type = "submit" onclick = "caesarCipherEncryptor()">Encrypt</button>
+
+  <h1 id= "encryptMessage"></h1>
+  <p id = "encryptedStr" style= "font-family: Verdana; font-size: 25px; color: red"></p>
+  <p id = "errorMsg" style= "font-family: Verdana; font-size: 25px; color: red"></p>
+</body>
+</html>
