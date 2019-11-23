@@ -39,9 +39,27 @@ function caesarCipherEncryptor(){
     document.getElementById("errorMsg").innerHTML = "Error:  The number must be between 0 and 26";
       return;
   }
+function encrypt(encryptMeStr, shiftNum){
 
+  let encryptedStr = encryptMeStr.split('').map(e =>
+    {
+    if (e.charCodeAt(0) >= 97 && e.charCodeAt(0) <= 122){//lowercase
+      if((e.charCodeAt(0) + shiftNum) > 122){
+        return String.fromCharCode((e.charCodeAt(0) + shiftNum) % 122 + 97)
+      }else {
+        return  String.fromCharCode(e.charCodeAt(0) + shiftNum)
+      }
+    }else if(e.charCodeAt(0) >= 65 && e.charCodeAt(0) <= 90){//uppercase
+      if ((e.charCodeAt(0) + shiftNum) > 90){
+        return String.fromCharCode((e.charCodeAt(0) + shiftNum) % 90 + 65)
+      }else{
+        return  String.fromCharCode(e.charCodeAt(0) + shiftNum)
+      }
+   }}).join('')
+   return encryptedStr
+  }
   
-// let strEncrypted = encrypt(encryptMeStr,shiftNum)
+//  let strEncrypted = encrypt(encryptMeStr,shiftNum)
 
   //to output encrypted string to webpage
   document.getElementById("encryptMessage").innerHTML = "The top secret encrypted word is : "
@@ -49,22 +67,3 @@ function caesarCipherEncryptor(){
   document.getElementById("encryptedStr").innerHTML = encrypt(encryptMeStr,shiftNum);
 }
 
-// function encrypt(encryptMeStr, shiftNum){
-
-//   let encryptedStr = encryptMeStr.split('').map(e =>
-//     {
-//     if (e.charCodeAt(0) >= 97 && e.charCodeAt(0) <= 122){//lowercase
-//       if((e.charCodeAt(0) + shiftNum) > 122){
-//         return String.fromCharCode((e.charCodeAt(0) + shiftNum) % 122 + 97)
-//       }else {
-//         return  String.fromCharCode(e.charCodeAt(0) + shiftNum)
-//       }
-//     }else if(e.charCodeAt(0) >= 65 && e.charCodeAt(0) <= 90){//uppercase
-//       if ((e.charCodeAt(0) + shiftNum) > 90){
-//         return String.fromCharCode((e.charCodeAt(0) + shiftNum) % 90 + 65)
-//       }else{
-//         return  String.fromCharCode(e.charCodeAt(0) + shiftNum)
-//       }
-//    }}).join('')
-//    return encryptedStr
-//   }
