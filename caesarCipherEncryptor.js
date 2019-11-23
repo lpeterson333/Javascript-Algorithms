@@ -18,7 +18,7 @@
 //there was a way to do this using bit shift i think 
 //if shiftNum = 3 then 65 becomes 68
 // "use strict";
-const {encrypt}= require("./encrypt") //require returns an object, use object destructuring to assign function encrypt to a variable of the same name
+//const {encrypt}= require("./encrypt") //require returns an object, use object destructuring to assign function encrypt to a variable of the same name
 function caesarCipherEncryptor(){
   //to get user input for string to encrypt and shift to use
   //safety checks on encryptMeStr...not done yet
